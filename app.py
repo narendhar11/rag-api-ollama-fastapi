@@ -39,7 +39,7 @@ def query(q: str):
             model=MODEL_NAME,
             prompt=f"Context:\n{context}\n\nQuestion: {q}\n\nAnswer clearly and concisely:",
         )
-
+        # log
         logging.info(f"query asked: {q}")
 
         return {"answer": answer["response"]}
